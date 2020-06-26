@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:layout_gravity="center"
+    android:background="@color/colorBackground">
+
+    <!-- Agregamos la vista del archivo titulo.xml que contiene la toolbar con el nombre del programa-->
+    <include layout="@layout/titulo"/>
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorTituloAux">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Dirección de entrega"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:textColor="#000000"/>
+
+    </androidx.appcompat.widget.Toolbar>
+    <!--Damos los campos a llenar por el usuario, o en otro caso si se da click en "Obtener ubicación" se buscará la dirección GPS del dispositivo para llenar los campos automáticamente-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="A continuación llene los campos requeridos"
+        android:textSize="20dp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:text="Dirección:"
+        android:textSize="20dp"
+        android:textColor="#000000"/>
+
+    <EditText
+        android:id="@+id/Editext_dir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:text="Ciudad:"
+        android:textSize="20dp"
+        android:textColor="#000000"/>
+
+    <EditText
+        android:id="@+id/Editext_ciu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <!--Botones para el llenado automático de dirección y dar resumen del pedido, esta última acción se realizará sólo si los campos fueron llenados anteriormente.-->
+    <Button
+        android:id="@+id/btn_get_ubicacion"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="50dp"
+        android:layout_marginHorizontal="120dp"
+        android:text="@string/btn_ubicacion"
+        android:background="@color/colorTitulo"/>
+
+    <Button
+        android:id="@+id/btn_get_resumen"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:layout_marginHorizontal="120dp"
+        android:text="@string/btn_resumen"
+        android:background="@color/colorTitulo"/>
+
+
+</LinearLayout>

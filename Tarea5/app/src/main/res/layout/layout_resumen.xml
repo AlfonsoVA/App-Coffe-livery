@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:layout_gravity="center"
+    android:background="@color/colorBackground">
+
+    <!-- Agregamos la vista del archivo titulo.xml que contiene la toolbar con el nombre del programa-->
+    <include layout="@layout/titulo"/>
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorTituloAux">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Resumen de pedido"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:textColor="#000000"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!--Los TextView de la ubicación serán llenados con la pantalla anterior (campos_ubicación.xml)-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Dirección:"
+        android:textSize="20dp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/Text_dir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="5dp"
+        android:text=""
+        android:textSize="20dp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Ciudad:"
+        android:textSize="20dp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/Text_ciu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="5dp"
+        android:text=""
+        android:textSize="20dp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Orden:"
+        android:textSize="20dp"
+        android:textColor="#000000"/>
+
+    <!--El TextView de la orden recibirá lo que se pidió e iterará los elementos, agregandolos  al string que corresponda al layout-->
+    <TextView
+        android:id="@+id/Text_orden"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="5dp"
+        android:text=""
+        android:textSize="20dp"
+        android:textColor="#000000"/>
+
+    <Button
+        android:id="@+id/btn_confirma_pedido"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="50dp"
+        android:layout_marginHorizontal="120dp"
+        android:text="@string/btn_confirma"
+        android:background="@color/colorTitulo"/>
+    <TextView
+        android:id="@+id/Text_historial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:text="Historial de pedidos:"
+        android:textSize="20dp"
+        android:textColor="#000000"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lista_pedidos" />
+    </ScrollView>
+
+
+</LinearLayout>

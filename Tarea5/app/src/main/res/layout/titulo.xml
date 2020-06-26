@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/colorTitulo">
+    <!--Los datos de la ToolBar, siendo el nombre del programa-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/titulo"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:textColor="#000000"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/titulo_2"
+        android:gravity="bottom"
+        android:textSize="15dp"
+        android:textStyle="italic"
+        android:layout_marginLeft="25dp"
+        android:textColor="#000000"/>
+
+
+</Toolbar>

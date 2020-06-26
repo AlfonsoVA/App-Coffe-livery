@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Coffe-livery</string>
+    <string name="btn_inicio">Realizar pedido</string>
+    <string name="btn_menu">Dar direccion de entrega</string>
+    <string name="btn_ubicacion">Obtener ubicación</string>
+    <string name="btn_resumen">Obtener resumen del pedido</string>
+    <string name="btn_confirma">Confirmar pedido</string>
+    <string name="btn_regresar">Volver a inicio</string>
+    <string name="btn_historial">Ver historial</string>
+    <string name="titulo">Coffe-livery </string>
+    <string name="titulo_2"> De la cafeteria a su mesa</string>
+    <string-array name="spin_cafe">
+        <item>Americano</item>
+        <item>Capuchino</item>
+        <item>Moca</item>
+    </string-array>
+
+    <string-array name="spin_ref">
+        <item>Coca-Cola</item>
+        <item>Sprite</item>
+        <item>Manzana</item>
+    </string-array>
+
+    <string-array name="spin_te">
+        <item>Verde</item>
+        <item>Manzanilla</item>
+        <item>Jazmin</item>
+    </string-array>
+
+    <string-array name="spin_count">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="spin_sandwich">
+        <item>Pollo</item>
+        <item>Jamón</item>
+        <item>Queso</item>
+    </string-array>
+
+    <string-array name="spin_ensalada">
+        <item>César</item>
+        <item>Rusa</item>
+        <item>Mixta</item>
+    </string-array>
+
+    <string-array name="spin_pastel">
+        <item>Chocolate</item>
+        <item>Vainilla</item>
+        <item>Fresa</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:layout_gravity="center"
+    android:background="@color/colorBackground">
+    <!-- Agregamos la vista del archivo titulo.xml que contiene la toolbar con el nombre del programa-->
+    <include layout="@layout/titulo"/>
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorTituloAux">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Pedido confirmado"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:textColor="#000000"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="150dp"
+        android:textAlignment="center"
+        android:text="Su pedido ha sido realizado"
+        android:textSize="40dp"
+        android:textColor="#000000" />
+
+    <!-- Se cierra la aplicación y reinicia la petición de pedido al abrirla-->
+    <Button
+        android:id="@+id/btn_terminar_pedido"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="50dp"
+        android:layout_marginHorizontal="120dp"
+        android:text="@string/btn_regresar"
+        android:background="@color/colorTitulo"/>
+
+</LinearLayout>

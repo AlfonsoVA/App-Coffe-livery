@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <!-- Agregamos la vista del archivo titulo.xml que contiene la toolbar con el nombre del programa-->
+    <include
+        android:id="@+id/barra_titulo"
+        layout="@layout/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"/>
+    <!--Toolbar para la sección del programa, eventualmente se podrá tener la opción de cambiar entre sección de platillos o bebidas.-->
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar_menu"
+        android:layout_below="@+id/barra_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorTituloAux">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text = "Menu"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textColor="#000000"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/text_instruct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_menu"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Platillos"
+        android:textColor="#000000"
+        android:textSize="18dp"/>
+
+    <!--Usamos LinearLayout para alinear los elementos de cada tipo de platillo.-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear_platillos"
+        android:layout_width="match_parent"
+        android:layout_height="206dp"
+        android:layout_below="@id/text_instruct"
+        android:orientation="vertical">
+
+        <!--Sección de Ensalada-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/Ensalada_line"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb_ens"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:text="Ensalada"
+                android:textSize="18dp" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_ens_name"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:entries="@array/spin_ensalada" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_ens_count"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:entries="@array/spin_count" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--Sección de Sandwich-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/Sandwich_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb_sand"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:text="Sandwich"
+                android:textSize="18dp" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_sand_name"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:entries="@array/spin_sandwich" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_sand_count"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:entries="@array/spin_count" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--Sección de Pastel-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/Pastel_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb_pas"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:text="Rebanada \n de pastel"
+                android:textSize="18dp" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_pas_name"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:entries="@array/spin_pastel" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_pas_count"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:entries="@array/spin_count" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <!--Usamos LinearLayout para alinear los elementos de cada tipo de bebida.-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear_bebidas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_bebidas"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/Cafe_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_instruct"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb_cafe"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:text="Café"
+                android:textSize="18dp" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_caf_name"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:entries="@array/spin_cafe" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_caf_count"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:entries="@array/spin_count" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--Sección de Refresco-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/Ref_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Cafe_line"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb_ref"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:text="Refresco"
+                android:textSize="16dp" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_ref_name"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:entries="@array/spin_ref" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_ref_count"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:entries="@array/spin_count" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--Sección de Té-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/Te_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cb_te"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:text="Té"
+                android:textSize="16dp" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_te_name"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:entries="@array/spin_te" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/sp_te_count"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:entries="@array/spin_count" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_bebidas"
+        android:layout_below="@+id/linear_platillos"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:text="Bebidas"
+        android:textColor="#000000"
+        android:textSize="18dp"/>
+
+    <Button
+        android:id="@+id/btn_dar_dir"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_bebidas"
+        android:background="@color/colorTitulo"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="110dp"
+        android:text="@string/btn_menu" />
+
+</RelativeLayout>
